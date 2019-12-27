@@ -1,0 +1,104 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Webpack + Pug';
+  - var description = 'Description for Webpack + Pug';
+  - var pageClass = 'index-page';
+
+block content
+  section.main-offer(style= "background: url('../assets/img/content/flag-bg.png')")
+    .container
+      .row
+        .col-lg-6.main-offer__left-part
+          .main-offer__left-part__title
+            h1.text-uppercase КОНСУЛЬТАЦИИ ПО ЛЕГАЛИЗАЦИИ САМОСТРОЯ
+            p.subtitle в течение 3-х минут
+          .main-offer__left-part__icons
+            .icon-container
+              .icon-container__img
+                +icon('allday-consult', '60px', '60px')
+              .icon-container__text
+                p Круглосуточная консультация
+            .icon-container
+              .icon-container__img
+                +icon('experience', '60px', '60px')
+              .icon-container__text
+                p Опыт работы более 20 лет
+        .col-lg-6.main-offer__form
+          .form-1__wrapper
+            form.main-form(action="")
+              h3.form-title.text-uppercase оставь заявку и мы перезвоним в течение 3-х минут
+              .form-1__container
+                .input-container
+                  input.form-control(type="text", name="name", placeholder="Имя*")
+                .input-container
+                  input.form-control(type="tel", name="tel", placeholder="Телефон*")
+                .input-container
+                  textarea.form-control(name="question", cols="auto", rows="10", placeholder="Вопрос*")
+                .submit-container.text-center
+                  button.btn.btn-outline-light.btn-form-1(type="submit") Отправить
+      .row.main-offer__bottom-row
+        .col-lg-9
+          .media
+            .media__img-container.d-flex.align-self-center.mr-3
+              +icon('12-icon', '146px', '141px')
+              span.abs-center 12
+            .media-body.d-flex.align-self-center
+              p.subtitle Успешных консультаций по легализации самостроя за последние 24 часа
+
+  section.info-service.bg-primary
+      .info-service__left-img
+        +icon('house', '100%', '100%')
+        img.stamp(src="../assets/img/content/stamp.png", alt="")
+      img.gerb(src="../assets/img/content/gerb.png", alt="")
+      .container.info-service__container
+        .row
+          .col-lg-6
+          .col-lg-6.info-service__text
+            .info-service__text__title
+              h2 Четыре способа легализации самостроя
+            .info-service__text__info
+              p Lorem ipsum dolor sit amet. Tincidunt vel eros ipsum esse. Ex kasd gubergren. Sadipscing te eros. Ut augue vel et. Labore iriure euismod delenit eum gubergren quod sed. Duo eirmod eos aliquyam tempor nonumy accusam adipiscing. Dolor sadipscing eu lorem lobortis consetetur illum. Enim elitr ut ullamcorper sit feugait. Cum enim vero diam aliquyam. Volutpat eos dolore sea duis et invidunt. In consequat ea est et vulputate ut amet. No minim in sed. In et feugiat consetetur vel. Consectetuer elitr diam dolore. Ea justo et nostrud eos eu dolore takimata. Takimata veniam hendrerit. Liber voluptua erat. Magna eos exerci. Et lorem eros iusto lorem. Consectetuer sadipscing et at consequat et justo iriure. Tempor dolore id sit sed dolor eirmod rebum. Dolor et tation dolore. Dolores at aliquyam diam tincidunt no ut. Dolore tation at ut amet. Dolor vero magna iriure sit eirmod velit. In duis et erat aliquam rebum gubergren. Eirmod gubergren vel consetetur ea magna consectetuer doming. Exerci tincidunt sanctus stet justo. Aliquam velit sed euismod ut aliquip sanctus. Dolores lorem ea elitr rebum. Voluptua dolore dignissim feugait eos aliquyam consequat. Lorem ipsum dolor sit amet. Tincidunt vel eros ipsum esse. Ex kasd gubergren. Sadipscing te eros. Ut augue vel et. Labore iriure euismod delenit eum gubergren quod sed. Duo eirmod eos aliquyam tempor nonumy accusam adipiscing. Dolor sadipscing eu lorem lobortis consetetur illum. Enim elitr ut ullamcorper sit feugait. Cum enim vero diam aliquyam. Volutpat eos dolore sea duis et invidunt. In consequat ea est et vulputate ut amet. No minim in sed. In et feugiat consetetur vel. Consectetuer elitr diam dolore. Ea justo et nostrud eos eu dolore takimata. Takimata veniam hendrerit. Liber voluptua erat.
+
+  section.questions
+    img.gerb-top(src="../assets/img/content/gerb-top.png", alt="")
+    .container.questions-container
+      .row
+        .col-lg-9
+          .media
+            .media__img-container.d-flex.align-self-center.mr-3
+              +icon('12-icon', '146px', '141px')
+              span.abs-center ?
+            .media-body.d-flex.align-self-center
+              p.subtitle Вопросы, которые<br> вы задавали
+      .row.questions__carousel-row
+        .col-lg-12
+          #questions-carousel.owl-carousel.owl-theme.owl-loaded
+            .item
+              .item__title
+                p.subtitle.text-center №1001
+              .item__info
+                p Lorem ipsum dolor sit amet. Tincidunt vel eros ipsum esse. Ex kasd gubergren. Sadipscing te eros. Ut augue vel et. Labore iriure euismod delenit eum gubergren quod sed. Duo eirmod eos aliquyam tempor nonumy accusam adipiscing. Dolor sadipscing eu lorem lobortis consetetur illum. Enim elitr ut ullamcorper sit feugait. Cum enim vero diam aliquyam. Volutpat eos dolore sea duis et invidunt. In consequat ea est et vulputate ut amet.
+            .item
+              .item__title
+                p.subtitle.text-center №1002
+              .item__info
+                p Lorem ipsum dolor sit amet. Tincidunt vel eros ipsum esse. Ex kasd gubergren. Sadipscing te eros. Ut augue vel et. Labore iriure euismod delenit eum gubergren quod sed. Duo eirmod eos aliquyam tempor nonumy accusam adipiscing. Dolor sadipscing eu lorem lobortis consetetur illum. Enim elitr ut ullamcorper sit feugait. Cum enim vero diam aliquyam. Volutpat eos dolore sea duis et invidunt. In consequat ea est et vulputate ut amet.
+            .item
+              .item__title
+                p.subtitle.text-center №1003
+              .item__info
+                p Lorem ipsum dolor sit amet. Tincidunt vel eros ipsum esse. Ex kasd gubergren. Sadipscing te eros. Ut augue vel et. Labore iriure euismod delenit eum gubergren quod sed. Duo eirmod eos aliquyam tempor nonumy accusam adipiscing. Dolor sadipscing eu lorem lobortis consetetur illum. Enim elitr ut ullamcorper sit feugait. Cum enim vero diam aliquyam. Volutpat eos dolore sea duis et invidunt. In consequat ea est et vulputate ut amet.
+            .item
+              .item__title
+                p.subtitle.text-center №1004
+              .item__info
+                p Lorem ipsum dolor sit amet. Tincidunt vel eros ipsum esse. Ex kasd gubergren. Sadipscing te eros. Ut augue vel et. Labore iriure euismod delenit eum gubergren quod sed. Duo eirmod eos aliquyam tempor nonumy accusam adipiscing. Dolor sadipscing eu lorem lobortis consetetur illum. Enim elitr ut ullamcorper sit feugait. Cum enim vero diam aliquyam. Volutpat eos dolore sea duis et invidunt. In consequat ea est et vulputate ut amet.
+            .item
+              .item__title
+                p.subtitle.text-center №1005
+              .item__info
+                p Lorem ipsum dolor sit amet. Tincidunt vel eros ipsum esse. Ex kasd gubergren. Sadipscing te eros. Ut augue vel et. Labore iriure euismod delenit eum gubergren quod sed. Duo eirmod eos aliquyam tempor nonumy accusam adipiscing. Dolor sadipscing eu lorem lobortis consetetur illum. Enim elitr ut ullamcorper sit feugait. Cum enim vero diam aliquyam. Volutpat eos dolore sea duis et invidunt. In consequat ea est et vulputate ut amet.
+
+
+block script
