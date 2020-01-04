@@ -1,0 +1,21 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang='ru-RU')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{title}
+    meta(name="description", content=description)
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=9446f547-e5bf-4dcc-ad67-117461b08482&lang=ru_RU" type="text/javascript")
+    block head
+
+  body(class=pageClass)
+    .wrapper
+      #app
+        include ../includes/modules/header
+        .content-wrapper
+          block content
+
+    block script

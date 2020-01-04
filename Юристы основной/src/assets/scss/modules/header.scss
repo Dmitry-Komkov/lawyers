@@ -1,0 +1,65 @@
+// header style
+.header__logo {
+    padding: 0 3%;
+}
+.header__logo__container {
+    position: relative;
+    padding: 4px 0;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -5px;
+        width: 5px;
+        height: 100%;
+        background-color: $secondary;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 5px;
+        height: 100%;
+        background-color: $secondary;
+    }
+}
+
+.header__info {
+    @media screen and (min-width: $smPhoneWidth) {
+        position: relative;
+        font-size: rem(14);
+        font-weight: 300;
+        line-height: rem(16);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    @media screen and (min-width: $smDesktopWidth) {
+        padding: 0 15px;
+        &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 60%;
+            top: 20%;
+            left: 100%;
+            background-color: #fff;
+        }
+        .header__info__container {
+            flex: 0 0 90%;
+        }
+    }
+}
+
+
+.header-link {
+    color: white;
+    display: block;
+    &:hover {
+        color: #d1d1d1;
+    }
+}

@@ -1,0 +1,211 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Webpack + Pug';
+  - var description = 'Description for Webpack + Pug';
+  - var pageClass = 'index-page';
+
+block content
+  .modal.fade#modal-form(tabindex="-1" role="dialog" aria-labelledby="modalFormLabel" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+      .modal-content
+        button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+        .modal-body
+          .form-1__wrapper
+            form.main-form(action="")
+              h3.form-title.text-uppercase#modalFormLabel оставь заявку и мы перезвоним в течение 3-х минут
+              .form-1__container
+                .input-container
+                  input.form-control(type="text", name="name", placeholder="Имя*")
+                .input-container
+                  input.form-control(type="tel", name="tel", placeholder="Телефон*")
+                .input-container
+                  textarea.form-control(name="question", cols="auto", rows="10", placeholder="Вопрос*")
+                .submit-container.text-center
+                  button.btn.btn-outline-light.btn-form-1(type="submit") Отправить
+
+  section.main-offer
+    .container
+      .row
+        .col-12.d-md-none.main-offer__title-mob
+          h2.text-center.hidden-subtitle Опытные юристы по коммерческой недвижимости работаем с 1998 года
+          p.subtitle-mob.text-center.text-uppercase Бесплатная консультация
+        .col-md-6.main-offer__left-part.col-12.d-md-flex.align-items-center.d-lg-block
+          .partners__grid-container
+            .grid-item
+              img(src="assets/img/content/logo-icon-1.png", alt="")
+            .grid-item
+              img(src="assets/img/content/logo-icon-2.png", alt="")
+            .grid-item
+              img(src="assets/img/content/logo-icon-3.png", alt="")
+            .grid-item
+              img(src="assets/img/content/logo-icon-4.png", alt="")
+            .grid-item
+              img(src="assets/img/content/logo-icon-5.png", alt="")
+            .grid-item
+              img(src="assets/img/content/logo-icon-6.png", alt="")
+            .grid-item
+              img(src="assets/img/content/logo-icon-7.png", alt="")
+            .grid-item
+              img(src="assets/img/content/logo-icon-8.png", alt="")
+            .grid-item
+              img(src="assets/img/content/logo-icon-9.png", alt="")
+            .grid-item
+              img(src="assets/img/content/logo-icon-10.png", alt="")
+            .grid-item
+              img(src="assets/img/content/logo-icon-11.png", alt="")
+        .col-md-6.main-offer__form.col-12
+          .form-1__wrapper
+            form.main-form(action="")
+              h3.form-title.text-uppercase оставь заявку и мы перезвоним в течение 3-х минут
+              .form-1__container
+                .input-container
+                  input.form-control(type="text", name="name", placeholder="Имя*")
+                .input-container
+                  input.form-control(type="tel", name="tel", placeholder="Телефон*")
+                .input-container
+                  textarea.form-control(name="question", cols="auto", rows="10", placeholder="Вопрос*")
+                .submit-container.text-center
+                  button.btn.btn-outline-light.btn-form-1(type="submit") Отправить
+
+  section.questions.bg-primary.text-light
+    .container.questions-container
+      .row
+        .col-md-9.col-12
+          .media
+            .media__img-container.d-md-flex.align-self-center.mr-3.d-none
+              +icon('12-icon', '146px', '141px')
+              span.abs-center
+                +icon('hands-icon', '82px', '52px')
+            .media-body.d-block.d-md-flex.align-self-center
+              p.subtitle.text-center.text-md-left Оказание содействия и помощь в получении документов
+    .container-fluid.bg-light.carousel-container
+      .container
+        .row.questions__carousel-row
+          .col-md-12
+            #questions-carousel.swiper-container
+              .swiper-wrapper
+                .swiper-slide
+                  img(src="assets/img/content/logo-icon-1.png", alt="")
+                .swiper-slide
+                  img(src="assets/img/content/logo-icon-2.png", alt="")
+                .swiper-slide
+                  img(src="assets/img/content/logo-icon-3.png", alt="")
+                .swiper-slide
+                  img(src="assets/img/content/logo-icon-4.png", alt="")
+                .swiper-slide
+                  img(src="assets/img/content/logo-icon-5.png", alt="")
+                .swiper-slide
+                  img(src="assets/img/content/logo-icon-6.png", alt="")
+                .swiper-slide
+                  img(src="assets/img/content/logo-icon-7.png", alt="")
+                .swiper-slide
+                  img(src="assets/img/content/logo-icon-8.png", alt="")
+                .swiper-slide
+                  img(src="assets/img/content/logo-icon-9.png", alt="")
+                .swiper-slide
+                  img(src="assets/img/content/logo-icon-10.png", alt="")
+                .swiper-slide
+                  img(src="assets/img/content/logo-icon-11.png", alt="")
+            .swiper-button-prev
+            .swiper-button-next
+    .container.carousel-form__container
+      .carousel-form__wrapper
+        form.carousel-form(action="")
+          .carousel-form__inputs-grid
+            .carousel-input__container
+              input.form-control(type="text", name="name", placeholder="Имя*")
+            .carousel-input__container
+              input.form-control(type="tel", name="tel", placeholder="Телефон*")
+            .carousel-input__container.submit-container
+              button.btn.btn-outline-light.btn-form-carousel(type="submit") Отправить
+
+
+  section.specialists(style="background-image: url('assets/img/content/spec-bg.png')")
+    .container
+      .specialists__grid-container
+        .specialists__grid-item
+          .specialists__grid-item__img-wrap
+            img.spec(src="assets/img/content/spec-1.png", alt="")
+            img.spec-transp(src="assets/img/content/spec-transp.png", alt="")
+            img.spec-flag(src="assets/img/content/spec-flag.png", alt="")
+          .specialists__grid-item__info-wrap
+            .specialists__grid-item__info-wrap__works
+              ul.works
+                li - Аренда земли
+                li - Аренда леса 
+                li - Согласование ВРИ 
+                li - Получение ГПЗУ
+            .specialists__grid-item__info-wrap__button
+              button.btn.btn-primary(data-toggle="modal" data-target="#modal-form") Узнать
+        .specialists__grid-item
+          .specialists__grid-item__img-wrap
+            img.spec(src="assets/img/content/spec-2.png", alt="")
+            img.spec-transp(src="assets/img/content/spec-transp.png", alt="")
+            img.spec-flag(src="assets/img/content/spec-flag.png", alt="")
+          .specialists__grid-item__info-wrap
+            .specialists__grid-item__info-wrap__works
+              p Легализация<br>самостроя
+            .specialists__grid-item__info-wrap__button
+              button.btn.btn-primary(data-toggle="modal" data-target="#modal-form") Узнать
+        .specialists__grid-item
+          .specialists__grid-item__img-wrap
+            img.spec(src="assets/img/content/spec-3.png", alt="")
+            img.spec-transp(src="assets/img/content/spec-transp.png", alt="")
+            img.spec-flag(src="assets/img/content/spec-flag.png", alt="")
+          .specialists__grid-item__info-wrap
+            .specialists__grid-item__info-wrap__works
+              p Внесение<br>изменений<br>ВРИ
+            .specialists__grid-item__info-wrap__button
+              button.btn.btn-primary(data-toggle="modal" data-target="#modal-form") Узнать
+        .specialists__grid-item
+          .specialists__grid-item__img-wrap
+            img.spec(src="assets/img/content/spec-4.png", alt="")
+            img.spec-transp(src="assets/img/content/spec-transp.png", alt="")
+            img.spec-flag(src="assets/img/content/spec-flag.png", alt="")
+          .specialists__grid-item__info-wrap
+            .specialists__grid-item__info-wrap__works
+              p Получение<br>разрешения<br>на строительство
+            .specialists__grid-item__info-wrap__button
+              button.btn.btn-primary(data-toggle="modal" data-target="#modal-form") Узнать
+
+    .container-fluid.specialists__blue-line
+      .container
+        .row
+          .col-12
+            h3.subtitle.text-center  РАБОТАЕМ С 1998 ГОДА<br>ОПЫТНЫЕ ЮРИСТЫ ПО КОММЕРЧЕСКОЙ НЕДВИЖИМОСТИ
+
+    .container.mistakes
+      .row.align-items-center
+        .col-md-5.d-none.d-md-block
+          .mistakes__img-container
+            img(src="assets/img/content/flag-rus-3.png", alt="")
+        .col-md-7.col-12
+          .mistakes__text-container
+            h3.subtitle.text-center.text-md-left Ошибки, которые совершают ВСЕ при легализации самостроя
+            ol.mistakes__list
+              li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor nibh vel ligula pretium fringilla.
+              li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor nibh vel ligula pretium fringilla.
+              li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor nibh vel ligula pretium fringilla.
+              li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor nibh vel ligula pretium fringilla.
+
+  section.map-wrapper
+    .container-fluid
+      .row
+        .col-md-7#map.col-12.order-2.order-md-1
+        .col-md-5.d-flex.align-items-center.justify-content-center.flex-column.text-light.map-container__right.col-12.order-1.order-md-2
+          .map-container__img.d-none.d-md-block
+            img(src="assets/img/content/flag-map.png", alt="")
+          .map-container__info.text-center
+            p.about.text-uppercase.d-none.d-md-block о компании
+            p С 1998 года 11 лучших юристов России оказывают консультационные услуги по комерческой недвижимости.
+          .map-container__address.d-md-block
+            img.d-md-none.mr-3(src="assets/img/content/flag-map.png", alt="")
+            ul.address
+              li Телефон:<br>8 (800) 888-88-88
+              li E-mail:<br>yr-pom@gmail.com
+              li Адрес:<br>г. Москва, ул. Ломоносова,<br>д.6, оф. 13
+
+
+block script
